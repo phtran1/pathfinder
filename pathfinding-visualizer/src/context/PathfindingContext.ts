@@ -1,4 +1,4 @@
-import { createContext, ReactNode } from "react";
+import { createContext, ReactNode, useState } from "react";
 import { AlgorithmType, GridType, MazeType } from "../utils/types";
 
 
@@ -19,5 +19,5 @@ export const PathfindingContext = createContext<
 >(undefined);
 
 export const PathfindingProvider = ({children}: {children: ReactNode}) => {
-    const [algorithm, setAlgorithm] = useState<algorithm>("DIJKSTRA");
+    const [algorithm, setAlgorithm] = useState<AlgorithmType>("BFS");
 }
