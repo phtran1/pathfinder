@@ -3,9 +3,9 @@ import { usePathfinding } from "../hooks/usePathfinding";
 import { MAX_COLS, MAX_ROWS } from "../utils/constants";
 import { Tile } from "./Tile";
 import { checkIfStartOrEnd, createNewGrid } from "../utils/helpers";
-import { useState } from "react";
+import { MutableRefObject, useState } from "react";
 
-export function Grid({ isVisualizationRunningRef }: { isVisualizationRunningRef: MutableObject<boolean> }) {
+export function Grid({ isVisualizationRunningRef }: { isVisualizationRunningRef: MutableRefObject<boolean>}) {
     const {grid, setGrid} = usePathfinding();
     const [isMouseDown, setIsMouseDown] = useState(false);
     const handleMouseDown = (row: number, col:number) => {
